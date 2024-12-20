@@ -1,0 +1,5 @@
+@media (max-width: 768px) {
+    .footerContainer {
+      flex-direction: column; /* Change to column direction on smaller screens */
+    }
+}

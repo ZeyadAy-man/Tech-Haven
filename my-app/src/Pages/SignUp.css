@@ -1,0 +1,108 @@
+.containerOfSignUp{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+}
+.inputFieldContainer{
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+}
+.formOfSignUp{
+    max-width: 400px;
+    min-width: 200px;
+    width: 100%;
+    max-height: 400px;
+    min-height: 200px;
+    height: 100%;
+    display: flex;
+    margin-top: 120px;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.7);
+    /* opacity: 0.5; */
+}
+.formOfSignUp::before{
+    filter: blur(25px);
+    position: absolute;
+}
+.submitButton{
+    padding: 12px;
+    font-weight: bolder;
+    border-radius: 8px;
+    width: 80px;
+    color: #f5f5f5;
+    background-color: #060b26;
+    transition: 0.5s;
+}
+.submitButton:hover{
+    background-color: #1a83ff;
+    transition: 0.5s;
+}
+.label{
+    font-weight: bold;
+    margin-left: 40px;
+}
+.inputField{
+    height: 30px;
+    border-radius: 4px;
+    padding-left: 5px;
+    margin: 10px 40px 10px 40px;
+    border: 1px solid gray
+}
+@media (min-height: 600px){
+    .formOfSignUp{
+        display: flex;
+        align-items: center;
+    }
+}
+#welcoming{
+    color: #1a83ff;
+  text-shadow: 
+    0 0 5px #fff,
+    0 0 10px #fff,
+    0 0 20px #fff,
+    0 0 40px #0ff,
+    0 0 80px #0ff,
+    0 0 90px #0ff,
+    0 0 100px #0ff,
+    0 0 150px #0ff;
+  animation: flicker 1.5s infinite alternate;
+}
+@keyframes flicker {
+    0%, 18%, 22%, 25%, 53%, 57%, 100% {
+      text-shadow: 
+        0 0 5px #fff,
+        0 0 10px #fff,
+        0 0 20px #fff,
+        0 0 40px #0ff,
+        0 0 80px #0ff,
+        0 0 90px #0ff,
+        0 0 100px #0ff,
+        0 0 150px #0ff;
+    }
+    20%, 24%, 55% {
+      text-shadow: none;
+    }
+}
+.signInLink:hover{
+    text-shadow: 
+    0 0 5px #fff,
+    0 0 10px #fff,
+    0 0 20px #fff,
+    0 0 40px #0ff,
+    0 0 80px #0ff,
+    0 0 90px #0ff,
+    0 0 100px #0ff,
+    0 0 150px #0ff;
+    transition: 0.5s;
+}
+.signInLink{
+    transition: 0.5s;
+    margin-bottom: 20px;
+}

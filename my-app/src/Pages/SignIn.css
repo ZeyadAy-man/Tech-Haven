@@ -1,0 +1,93 @@
+.containerOfSignIn{
+    height: 150vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+}
+.formOfSignIn{
+    max-width: 400px;
+    min-width: 200px;
+    width: 100%;
+    /* max-height: 500px;
+    min-height: 200px;
+    height: 100%; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.7);
+    margin-top: 80px;
+    /* opacity: 0.5; */
+}
+.formOfSignIn::before{
+    filter: blur(25px);
+    position: absolute;
+}
+.submitButton{
+    padding: 12px;
+    font-weight: bolder;
+    border-radius: 8px;
+    width: 80px;
+    color: #f5f5f5;
+    background-color: #060b26;
+    transition: 0.5s;
+}
+.submitButton:hover{
+    background-color: #1a83ff;
+    transition: 0.5s;
+}
+.label{
+    font-weight: bold;
+}
+@media (min-height: 600px){
+    .formOfSignUp{
+        display: flex;
+        align-items: center;
+    }
+}
+#welcoming{
+    color: #1a83ff;
+  text-shadow: 
+    0 0 5px #fff,
+    0 0 10px #fff,
+    0 0 20px #fff,
+    0 0 40px #0ff,
+    0 0 80px #0ff,
+    0 0 90px #0ff,
+    0 0 100px #0ff,
+    0 0 150px #0ff;
+  animation: flicker 1.5s infinite alternate;
+}
+@keyframes flicker {
+    0%, 18%, 22%, 25%, 53%, 57%, 100% {
+      text-shadow: 
+        0 0 5px #fff,
+        0 0 10px #fff,
+        0 0 20px #fff,
+        0 0 40px #0ff,
+        0 0 80px #0ff,
+        0 0 90px #0ff,
+        0 0 100px #0ff,
+        0 0 150px #0ff;
+    }
+    20%, 24%, 55% {
+      text-shadow: none;
+    }
+}
+.signInLink:hover{
+    text-shadow: 
+    0 0 5px #fff,
+    0 0 10px #fff,
+    0 0 20px #fff,
+    0 0 40px #0ff,
+    0 0 80px #0ff,
+    0 0 90px #0ff,
+    0 0 100px #0ff,
+    0 0 150px #0ff;
+    transition: 0.5s;
+}
+.signInLink{
+    transition: 0.5s;
+}
