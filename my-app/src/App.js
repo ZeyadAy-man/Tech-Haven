@@ -1,7 +1,7 @@
 import {useState} from 'react';
 import './App.css'
 import Navbar from './Components/Navbar';
-import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
+import { Navigate, Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 import ListOfLaptops from './Pages/ListOfLaptops';
 import Profile from './Pages/Profile';
 import Footer from './Components/Footer';
@@ -12,6 +12,7 @@ import ListOfUserLaptops from './Pages/ListOfUserLaptops';
 import SignUp from './Pages/SignUp';
 import SignIn from './Pages/SignIn';
 import EditProfilePage from './Pages/EditProfilePage';
+import Dashboard from './Pages/Dashboard';
 
 function App() {
   const [firstname, setFirstName] = useState('John');
@@ -29,6 +30,7 @@ function App() {
       <Router>
         <Navbar sideBarData={sideAdminBarData}/>
         <Routes>
+          <Route path='/' element={<Navigate to='/signUp'/>}/>
           <Route path='/profile'  element={
           <Profile 
             firstname={firstname} 
@@ -59,6 +61,7 @@ function App() {
           </UserProfile>
         } 
       />
+          <Route path='/dashboard' Component={Dashboard}/>
           <Route path='/editUserProfilePage' Component={EditProfilePage}/>
           <Route path='/editAdminProfilePage' Component={EditProfilePage}/>
           <Route path='/myCart' Component={MyCart}/> 

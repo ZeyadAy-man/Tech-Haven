@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import laptop1 from '../Resources/laptop1.png'
 import laptop2 from '../Resources/laptop2.png'
 import laptop3 from '../Resources/laptop3.png'
@@ -8,7 +8,9 @@ import '../Pages/SignUp.css'
 const SignUp = () => {
     const [error, setError] = useState("");
     const [email, setEmail] = useState('');
+    const navigate = useNavigate()
     const [password, setPassword] = useState('');
+    const [isAdmin, setIsAdmin] = useState(true);
     const laptops = [laptop1, laptop2, laptop3, laptop4];
     const [background, setBackground] = useState(laptop1);
     var [i, setI] = useState(0);
@@ -25,8 +27,7 @@ const SignUp = () => {
           setError('Password must be at least 8 characters long and contain both letters and numbers');
           return;
         }
-    
-        setError('');
+        (isAdmin) ? navigate('/dashboard') : navigate('/listOfUserLaptops')
       };
     useEffect(() => {
         const interval = setInterval(() => {
@@ -74,8 +75,8 @@ const SignUp = () => {
                     <div>
                         {error && <p style={{ color: 'red', fontSize: '14px' }}>{error}</p>}
                     </div>
-                    <Link to={'/signIn'}>
-                        <p className='signInLink'>Don't have an accout? Create one!</p>
+                    <Link to='/signIn' style={{margin: '0px 20px'}}>
+                        <p className='signInLink' style={{margin: '0px 20px'}}>Don't have an accout? Create one!</p>
                     </Link>
                 </form>    
             </div>  
