@@ -1,8 +1,7 @@
 import {useState} from 'react';
 import './App.css'
 import Navbar from './Components/Navbar';
-import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
-import ListOfLaptops from './Pages/ListOfLaptops';
+import { Navigate, Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 import Profile from './Pages/Profile';
 import Footer from './Components/Footer';
 import { sideAdminBarData } from './Components/SidebarData';
@@ -12,6 +11,12 @@ import ListOfUserLaptops from './Pages/ListOfUserLaptops';
 import SignUp from './Pages/SignUp';
 import SignIn from './Pages/SignIn';
 import EditProfilePage from './Pages/EditProfilePage';
+import Dashboard from './Pages/Dashboard';
+import EditLaptopInfoPage from './Pages/EditLaptopInfoPage';
+import DeleteLaptopPage from './Pages/DeleteLaptopPage';
+import { CrudLaptopContext } from './Context/CrudLaptopContext';
+import AddLaptop from './Pages/AddLaptop';
+import ListOfLaptopsPage from './Pages/ListOfLaptopsPage';
 
 function App() {
   const [firstname, setFirstName] = useState('John');
@@ -29,6 +34,7 @@ function App() {
       <Router>
         <Navbar sideBarData={sideAdminBarData}/>
         <Routes>
+          <Route path='/' element={<Navigate to='/signUp'/>}/>
           <Route path='/profile'  element={
           <Profile 
             firstname={firstname} 
@@ -42,7 +48,7 @@ function App() {
             
           </Profile>
         }/>
-          <Route path='/listOfLaptops' Component={ListOfLaptops}/>
+
           <Route 
         path='/userProfile' 
         element={
@@ -59,10 +65,15 @@ function App() {
           </UserProfile>
         } 
       />
+          <Route path='/dashboard' Component={Dashboard}/>
           <Route path='/editUserProfilePage' Component={EditProfilePage}/>
           <Route path='/editAdminProfilePage' Component={EditProfilePage}/>
           <Route path='/myCart' Component={MyCart}/> 
           <Route path='/listOfUserLaptops' Component={ListOfUserLaptops}/>  
+          <Route path='/listOfLaptops' Component={ListOfLaptopsPage}/>
+          <Route path='/editLaptopPage' Component={EditLaptopInfoPage}/>  
+          <Route path='/deleteLaptopPage' Component={DeleteLaptopPage}/> 
+          <Route path='/addLaptopPage' Component={AddLaptop}/> 
           <Route path='/signUp' Component={SignUp}/>
           <Route path='/signIn' Component={SignIn}/>
         </Routes>

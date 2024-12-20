@@ -1,0 +1,150 @@
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .header {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+  }
+  
+  .no-products {
+    font-size: 16px;
+    color: #777;
+    text-align: center;
+    margin: 20px 0;
+  }
+  
+  .laptops-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+  }
+  
+  .laptops-table th, 
+  .laptops-table td {
+    text-align: left;
+    padding: 12px 16px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+  }
+  
+  .laptops-table th {
+    background-color: #4CAF50;
+    color: white;
+    font-size: 18px;
+  }
+  
+  .laptops-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  .laptops-table tr:hover {
+    background-color: #ddd;
+  }
+  
+  .btn {
+    padding: 10px 16px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .delete-btn {
+    background-color: #e74c3c;
+    color: white;
+  }
+  
+  .delete-btn:hover {
+    background-color: #c0392b;
+    transform: scale(1.05);
+  }
+  
+  .add-btn {
+    background-color: #2ecc71;
+    color: white;
+    display: block;
+    margin: 20px auto;
+    width: fit-content;
+  }
+  
+  .add-btn:hover {
+    background-color: #27ae60;
+    transform: scale(1.05);
+  }
+  .noProducts {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+    background-color: #f5f5f5; /* Optional: Light background for the entire screen */
+    margin: 0; /* Remove default margin */
+}
+.containerOfForm{
+  margin-top: 100px;
+
+}
+  .no-products {
+    font-family: 'Arial', sans-serif;
+    font-size: 1.5rem;
+    color: #555; 
+    text-align: center;
+    margin-top: 50px;
+    padding: 20px;
+    background-color: #f9f9f9; 
+    border: 1px dashed #ccc; 
+    border-radius: 8px; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    animation: fadeIn 0.5s ease-in-out; 
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+  
+  @media (max-width: 768px) {
+    .header {
+      font-size: 20px;
+    }
+  
+    .btn {
+      font-size: 14px;
+      padding: 8px 12px;
+    }
+  
+    .laptops-table th, 
+    .laptops-table td {
+      padding: 10px 8px;
+      font-size: 14px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .btn {
+      font-size: 12px;
+      padding: 6px 10px;
+    }
+  
+    .header {
+      font-size: 18px;
+    }
+  }
+  
