@@ -11,6 +11,7 @@ import UserProfile from './Pages/UserProfile';
 import ListOfUserLaptops from './Pages/ListOfUserLaptops';
 import SignUp from './Pages/SignUp';
 import SignIn from './Pages/SignIn';
+import EditProfilePage from './Pages/EditProfilePage';
 
 function App() {
   const [firstname, setFirstName] = useState('John');
@@ -58,6 +59,8 @@ function App() {
           </UserProfile>
         } 
       />
+          <Route path='/editUserProfilePage' Component={EditProfilePage}/>
+          <Route path='/editAdminProfilePage' Component={EditProfilePage}/>
           <Route path='/myCart' Component={MyCart}/> 
           <Route path='/listOfUserLaptops' Component={ListOfUserLaptops}/>  
           <Route path='/signUp' Component={SignUp}/>
