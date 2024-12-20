@@ -36,9 +36,7 @@ const SignUp = () => {
             }else{
                 setI(i++)
             }
-        }, 3000);
-    
-        // Cleanup interval on component unmount
+        }, 3000);    
         return () => clearInterval(interval);
       }, []);
     return (
