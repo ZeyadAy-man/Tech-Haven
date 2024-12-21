@@ -19,6 +19,7 @@ import EditLaptopInfoPage from './Pages/EditLaptopInfoPage';
 import AddLaptop from './Pages/AddLaptop';
 import EditProfilePage from './Pages/EditProfilePage';
 import EditProfile from './Pages/EditProfilePage';
+import ViewLaptop from './Pages/ViewLaptop';
 import Home from './Pages/Home';
 function App() {
   const [firstname, setFirstName] = useState('John');
@@ -31,7 +32,7 @@ function App() {
   return (
     <>
       <Router>
-        <Navbar sideBarData={sideAdminBarData} isAdmin={false}/>
+        <Navbar sideBarData={sideAdminBarData} isAdmin={true}/>
         <Routes>
           <Route path='/' element={<Navigate to='/signUp'/>}/>
           <Route path='/profile'  element={
@@ -86,6 +87,7 @@ function App() {
           <Route path='/laptop' Component={ListOfLaptopsPage}/>
           <Route path='/laptop/getLaptopById/:id' Component={DeleteLaptopPage}/>
           <Route path='/laptop/editLaptopPage/:id' Component={EditLaptopInfoPage}/>
+          <Route path='listOfUserLaptops/:id' Component={ViewLaptop}/>
           <Route path='/addLaptopPage' Component={AddLaptop}/>
           <Route path='/editUserProfile' Component={EditProfile}/>
           <Route path='/editAdminProfile' Component={EditProfilePage}/>
