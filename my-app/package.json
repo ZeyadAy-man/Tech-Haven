@@ -1,6 +1,7 @@
 {
   "name": "my-app",
   "version": "0.1.0",
+  "homepage": "https://ZeyadAy-man.github.io/Tech-Haven",
   "private": true,
   "dependencies": {
     "@react-icons/all-files": "^4.1.0",
@@ -9,6 +10,7 @@
     "@testing-library/user-event": "^14.5.2",
     "axios": "^1.7.9",
     "cra-template": "1.2.0",
+    "gh-pages": "^6.2.0",
     "nodemon": "^3.1.7",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
@@ -21,7 +23,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
