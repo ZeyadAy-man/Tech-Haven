@@ -6,7 +6,7 @@ const Dashboard = () => {
     return (
         <>
             <div className="containerOfDashboard">
-                <input type="button" value="List Of Laptops" className='button' onClick={() => navigate('/listOfLaptops')}/>
+                <input type="button" value="List Of Laptops" className='button' onClick={() => navigate('/laptop')}/>
                 <input type="button" value="Profile" className='button' onClick={() => navigate('/profile')}/>
             </div>  
         </>

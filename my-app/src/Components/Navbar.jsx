@@ -6,9 +6,9 @@ import { sideAdminBarData, sideUserBarData } from './SidebarData';
 import '../Components/Navbar.css'
 import { IconContext } from 'react-icons';
 import image from '../Resources/image.png'
-const Navbar = (lol) => {
+const Navbar = ({isAdmin}) => {
     const [sidebar, setSideBar] = useState(false);
-    const [isAdmin, setIsAdmin] = useState(false);
+    // const [isAdmin, setIsAdmin] = useState(false);
     const showSideBar = () => setSideBar(!sidebar);
     return (
         <>

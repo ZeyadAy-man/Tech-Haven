@@ -12,20 +12,20 @@ export const sideAdminBarData = [
     },
     {
         title: 'Laptops',
-        path: '/listOfLaptops',
+        path: '/laptop',
         icon: <IoIcons.IoIosPaper/>,
         cName: 'navText'
     },
     {
-        title: 'Orders',
-        path: '/listOfOrders',
-        icon: <Falcons.FaCartPlus/>,
+        title: 'Dashboard',
+        path: '/dashboard',
+        icon: <IoIcons.IoIosPaper/>,
         cName: 'navText'
     },
     {
-        title: 'Users',
-        path: '/listOfUsers',
-        icon: <Falcons.FaEnvelopeOpenText/>,
+        title: 'Sign Out',
+        path: '/signUp',
+        icon: <Falcons.FaCartPlus/>,
         cName: 'navText'
     }
 ]
@@ -45,6 +45,12 @@ export const sideUserBarData = [
     {
         title: 'Cart',
         path: '/myCart',
+        icon: <Falcons.FaCartPlus/>,
+        cName: 'navText'
+    },
+    {
+        title: 'Sign Out',
+        path: '/signUp',
         icon: <Falcons.FaCartPlus/>,
         cName: 'navText'
     }

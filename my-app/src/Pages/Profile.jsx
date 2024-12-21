@@ -1,7 +1,7 @@
 import React from 'react';
-import './AdminProfile.css'
+import './Profile.css'
 import profileIcon from '../Resources/3135768.png'
-
+import { Link } from 'react-router-dom';
 
 
 function AdminProfile({ id,firstname,lastname,phone, children}) {
@@ -32,8 +32,8 @@ function AdminProfile({ id,firstname,lastname,phone, children}) {
           </p>
         
         </div>
-        
       </div>
+      <Link to='/editAdminProfile' style={{marginTop: '30px'}}><input type='button' className='button' value={'Edit Profile'}></input></Link>
       {children}
     </div>
   );

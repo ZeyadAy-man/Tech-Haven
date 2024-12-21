@@ -2,7 +2,7 @@ import React from 'react';
 import './UserProfile.css';
 import profileIcon from '../Resources/3135768.png';
 import '../App.css'
-
+import { Link } from 'react-router-dom';
 
 const UserProfile =({ firstname,lastname,email,phone,id,location,balance,children }) => {
   return (
@@ -45,7 +45,7 @@ const UserProfile =({ firstname,lastname,email,phone,id,location,balance,childre
         </div>
         
       </div>
-
+      <Link to='/editUserProfile' style={{marginTop: '30px'}}><input type='button' className='button' value={'Edit Profile'}></input></Link>
       {children}
 
     </div>

@@ -17,8 +17,8 @@ const Footer = () => {
                 <div style={{width: '100%', minWidth: '30%', display: 'flex', flex: 1, justifyContent: 'start', backgroundColor: primaryColor, flexDirection: 'column'}}>
                     <p style={{color: thirdColor, fontSize: '24px', fontWeight: '700', margin: '10px 0px 0px 20px'}}>Follow Us From</p>
                     <p style={{margin: '20px 10px 0px 20px'}}><a style={{textDecoration: 'none', color: secondaryColor, fontWeight: '800', fontSize: '20px'}} href="https://www.instagram.com/">Instgram</a></p>
-                    <p style={{margin: '20px 0px 20px 20px'}}><a style={{textDecoration: 'none', color: secondaryColor, fontWeight: '800', fontSize: '20px'}} href="https://www.facebook.com/">Facebook <FaFacebook color={fourthColor} scale={50}/></a></p>
-                    <p style={{margin: '0px 0px 10px 20px'}}><a style={{textDecoration: 'none', color: secondaryColor, fontWeight: '800', fontSize: '20px'}} href="https://x.com/">Twitter <FaInstagramSquare color='purple'/></a></p>
+                    <p style={{margin: '20px 0px 20px 20px'}}><a style={{textDecoration: 'none', color: secondaryColor, fontWeight: '800', fontSize: '20px'}} href="https://www.facebook.com/">Facebook</a></p>
+                    <p style={{margin: '0px 0px 10px 20px'}}><a style={{textDecoration: 'none', color: secondaryColor, fontWeight: '800', fontSize: '20px'}} href="https://x.com/">Twitter</a></p>
                 </div>
                 <div style={{width: '100%', display: 'flex', flex: 1, alignItems: 'start', backgroundColor: primaryColor, flexDirection: 'column'}}>
                     <p style={{color: thirdColor, fontSize: '24px', fontWeight: '700', margin: '10px 0px 0px 20px'}}>About Us</p>

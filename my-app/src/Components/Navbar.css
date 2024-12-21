@@ -8,6 +8,7 @@
     background-color: rgb(101, 237, 255);
     padding: 15px;
     font-weight: bold;
+    z-index: 4;
 }
 .closeMenuBarIcon{
     margin-left: 2rem;
@@ -54,6 +55,7 @@
     left: -100%;
     top: 0;
     transition: 700ms;
+    z-index: 4;
 }
 .navMenuActive{
     background-color: #060b26;
@@ -67,6 +69,7 @@
     justify-content: center;
     position: fixed;
     transition: 700ms;
+    z-index: 4;
 }
 .navText{
     display: flex;

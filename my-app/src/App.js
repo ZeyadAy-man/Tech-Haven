@@ -4,6 +4,7 @@ import Navbar from './Components/Navbar';
 import { Navigate, Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 import ListOfLaptops from './Pages/ListOfLaptops';
 import Profile from './Pages/Profile';
+import AdminProfile from './Pages/Profile';
 import Footer from './Components/Footer';
 import { sideAdminBarData } from './Components/SidebarData';
 import MyCart from './Pages/MyCart';
@@ -11,9 +12,14 @@ import UserProfile from './Pages/UserProfile';
 import ListOfUserLaptops from './Pages/ListOfUserLaptops';
 import SignUp from './Pages/SignUp';
 import SignIn from './Pages/SignIn';
-import EditProfilePage from './Pages/EditProfilePage';
 import Dashboard from './Pages/Dashboard';
-
+import ListOfLaptopsPage from './Pages/ListOfLaptopsPage';
+import DeleteLaptopPage from './Pages/DeleteLaptopPage';
+import EditLaptopInfoPage from './Pages/EditLaptopInfoPage';
+import AddLaptop from './Pages/AddLaptop';
+import EditProfilePage from './Pages/EditProfilePage';
+import EditProfile from './Pages/EditProfilePage';
+import Home from './Pages/Home';
 function App() {
   const [firstname, setFirstName] = useState('John');
   const [lastname, setLastName] = useState('Doe');
@@ -22,13 +28,10 @@ function App() {
   const [id, setId] = useState(255);
   const [location, setLocation] = useState('14th-st DownTown');
   const [balance, setBalance] = useState('$12976.43') ;
-
-
-
   return (
     <>
       <Router>
-        <Navbar sideBarData={sideAdminBarData}/>
+        <Navbar sideBarData={sideAdminBarData} isAdmin={false}/>
         <Routes>
           <Route path='/' element={<Navigate to='/signUp'/>}/>
           <Route path='/profile'  element={
@@ -36,12 +39,10 @@ function App() {
             firstname={firstname} 
             lastname={lastname}
             email={email} 
-            phone={phone}
-            
+            phone={phone} 
             location={location} 
             balance={balance}
           >
-            
           </Profile>
         }/>
           <Route path='/listOfLaptops' Component={ListOfLaptops}/>
@@ -61,13 +62,34 @@ function App() {
           </UserProfile>
         } 
       />
+      <Route 
+        path='/adminProfile' 
+        element={
+          <AdminProfile 
+            firstname={firstname} 
+            lastname={lastname}
+            email={email} 
+            phone={phone}
+            id={id} 
+            location={location} 
+            balance={balance}
+          >
+            
+          </AdminProfile>
+        } 
+      />
           <Route path='/dashboard' Component={Dashboard}/>
-          <Route path='/editUserProfilePage' Component={EditProfilePage}/>
-          <Route path='/editAdminProfilePage' Component={EditProfilePage}/>
           <Route path='/myCart' Component={MyCart}/> 
           <Route path='/listOfUserLaptops' Component={ListOfUserLaptops}/>  
           <Route path='/signUp' Component={SignUp}/>
           <Route path='/signIn' Component={SignIn}/>
+          <Route path='/laptop' Component={ListOfLaptopsPage}/>
+          <Route path='/laptop/getLaptopById/:id' Component={DeleteLaptopPage}/>
+          <Route path='/laptop/editLaptopPage/:id' Component={EditLaptopInfoPage}/>
+          <Route path='/addLaptopPage' Component={AddLaptop}/>
+          <Route path='/editUserProfile' Component={EditProfile}/>
+          <Route path='/editAdminProfile' Component={EditProfilePage}/>
+          <Route path='/home' Component={Home}/>
         </Routes>
         <Footer/>
       </Router>
